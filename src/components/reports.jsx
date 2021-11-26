@@ -23,6 +23,7 @@ const Reports = () => {
     const hideBlockAndResolvedReport = (reportId) => {
         const reports = reportsData.reports.filter(report => report.id !== reportId);
         setReportsData({...reportsData, reports});
+        if(reports && reports.length === 0) loadRepors(0);
     }
 
     const renderReports = () => {
