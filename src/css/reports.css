@@ -43,3 +43,12 @@ h2 {
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
 }
+
+@media screen and (max-width: 780px) {
+    .report {
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
