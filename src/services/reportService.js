@@ -12,7 +12,7 @@ function getReportsByState(state, page=0) {
 }
 
 function blockReport(reportId) {
-    return http.delete((`${reportUrl}/${500}`));
+    return http.delete((`${reportUrl}/${reportId}`));
 }
 
 function updateReportState(reportId, ticke7tState) {
