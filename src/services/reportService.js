@@ -15,8 +15,8 @@ function blockReport(reportId) {
     return http.delete((`${reportUrl}/${reportId}`));
 }
 
-function updateReportState(reportId, ticke7tState) {
-    return http.put(`${reportUrl}/${reportId}`, {ticke7tState});
+function updateReportState(reportId, ticketState) {
+    return http.put(`${reportUrl}/${reportId}`, {ticketState});
 }
 
 function addListOfNewReports(reports) {
