@@ -6,7 +6,7 @@ const { get, put, post, httpDelete, showToastifyLoading} = http;
 
 function getReportsByState(state, page=0) {
     const fetchReports = get(`${reportUrl}/${state}?page=${page}`);
-    showToastifyLoading(fetchReports);
+    showToastifyLoading(fetchReports, null, `Reports Page ${page + 1} is Fetched Successfully`);
     return fetchReports;
 }
 

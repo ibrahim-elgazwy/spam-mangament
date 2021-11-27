@@ -4,7 +4,8 @@ const Toastify = () => {
     return ( 
         <ToastContainer autoClose={3000} 
                         transition={Zoom}
-                        bodyStyle={{fontSize: 17}}/>
+                        style={{width: 400}}
+                        bodyStyle={{fontSize: 16}}/>
      );
 }
  
