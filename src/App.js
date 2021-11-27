@@ -1,10 +1,11 @@
 import Reports from './components/reports';
+import Toastify from './components/toastify';
 
 import 'react-toastify/dist/ReactToastify.css';
 import './App.css';
-import Toastify from './components/toastify';
 
-function App() {
+
+const App = () => {
   return (
     <div className="container">
       <Toastify />
