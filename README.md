@@ -4,7 +4,7 @@
 Install the dependencies
 
 ```sh
-$ npm install
+$ yarn install
 ```
 
 In the project directory, you can run:
