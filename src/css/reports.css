@@ -45,8 +45,12 @@ h2 {
 }
 
 @media screen and (max-width: 780px) {
+    .reports {
+        width: 100%;
+    }
+
     .report {
-        width: 95%;
+        width: 100%;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
