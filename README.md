@@ -1,6 +1,6 @@
 
 ## Project Demo
-```sh
+```
  https://spam-magament-react.herokuapp.com/
 ```
 
