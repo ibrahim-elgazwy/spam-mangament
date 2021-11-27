@@ -1,7 +1,7 @@
 
 ## Project Demo
 ```
-<a name="https://spam-magament-react.herokuapp.com/"></a>
+https://spam-magament-react.herokuapp.com/
 ```
 
 ## Available Scripts
