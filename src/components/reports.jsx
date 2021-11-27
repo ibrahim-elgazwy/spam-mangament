@@ -10,6 +10,8 @@ const Reports = () => {
         reports: [],
         paging: {}
     });
+    
+    const [loading, setLoading] = useState(true);
 
     const onResolve = async (reportId) => {
         await reportService.updateReportState(reportId, reportStateEnum.CLOSED);
@@ -38,7 +40,7 @@ const Reports = () => {
                     onBlock={onBlock} 
                     onResolve={onResolve} />);
 
-        return (<p>There  is no reports founded!</p>);
+        return  !loading ? (<p>There  is no reports founded!</p>) : <></>;
     }
 
     const showPagination = () => {
@@ -61,6 +63,7 @@ const Reports = () => {
     useEffect(() => {
         (async () => {
             await loadRepors(0);
+            setLoading(false);
         })();
     }, []);
 
