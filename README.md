@@ -1,7 +1,7 @@
 
 ## Project Demo
 ```sh
-$ https://spam-magament-react.herokuapp.com/
+ https://spam-magament-react.herokuapp.com/
 ```
 
 ## Available Scripts
