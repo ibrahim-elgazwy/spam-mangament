@@ -1,15 +1,14 @@
-import { ToastContainer} from 'react-toastify';
-
 import Reports from './components/reports';
 
 import 'react-toastify/dist/ReactToastify.css';
 import './App.css';
+import Toastify from './components/toastify';
 
 
 function App() {
   return (
     <div className="container">
-      <ToastContainer />
+      <Toastify />
       <Reports />
     </div>
   );
