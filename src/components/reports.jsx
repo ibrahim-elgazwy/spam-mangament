@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { toast } from "react-toastify";
 import reportService from "../services/reportService";
 import reportStateEnum from "../enums/reportStateEnum.js"
 import ReportDetail from "./reportDetail";
@@ -15,13 +14,11 @@ const Reports = () => {
 
     const onResolve = async (reportId) => {
         await reportService.updateReportState(reportId, reportStateEnum.CLOSED);
-        toast.success("Report Resolved Successfuly!");
         hideBlockAndResolvedReport(reportId);
     }
 
     const onBlock = async(reportId) => {
         await reportService.blockReport(reportId);
-        toast.success("Report Blocked Successfuly!");
         hideBlockAndResolvedReport(reportId);
     }
 

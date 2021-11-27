@@ -43,19 +43,22 @@ function handleErrors(error) {
   return Promise.reject(error);
 }
 
-const showToastifyLoading = (req) => {
-  debugger
+const showToastifyLoading = (req, 
+  pendingMsg = "Fetching data ...", 
+  successMsg = "Fetched data successfully 👌", 
+  errorMsg = "Something went wrong 🤯") => {
+  
   toast.promise(req, {
-    pending: 'Fetching data ...',
-    success: 'Fetched data successfully 👌',
-    error: 'Something went wrong 🤯',
+    pending: pendingMsg,
+    success: successMsg,
+    error: errorMsg,
   });
 }
 const httpMethos = {
   get: axios.get,
   post: axios.post,
   put: axios.put,
-  delete: axios.delete,
+  httpDelete: axios.delete,
   showToastifyLoading
 };
 
