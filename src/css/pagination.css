@@ -13,6 +13,7 @@
     height: 40px;
     background: #ccc;
     margin-right: 20px;
+    cursor: pointer;
     border-radius: 50%;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
