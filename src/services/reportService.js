@@ -8,7 +8,9 @@ function getAllReports() {
 }
 
 function getReportsByState(state, page=0) {
-    return http.get(`${reportUrl}/${state}?page=${page}`);
+    const fetchReports = http.get(`${reportUrl}/${state}?page=${page}`);
+    http.showToastifyLoading(fetchReports);
+    return fetchReports;
 }
 
 function blockReport(reportId) {

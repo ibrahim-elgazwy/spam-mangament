@@ -26,19 +26,15 @@ function handleResponse(result) {
 }
 
 function handleErrors(error) {
-  console.log(error.response);
   if(error.response && error.response.status && error.response.data.body) {
     const {data: {body}} = error.response;
 
-    if (error.response.status === 500) {
+    if (error.response.status === 500) 
       toast.error("Internal Server Error Occurrred.");
-    }
+    
     // Handle Custom Back End Error Codes
-    if(body && body.errorCode) {
+    else if(body && body.errorCode) 
       toast.error(body.errorDescription);
-    } else {
-      toast.error(body.errorDescription);
-    }
 
   } else {
     toast.error(error.message);
@@ -47,11 +43,20 @@ function handleErrors(error) {
   return Promise.reject(error);
 }
 
+const showToastifyLoading = (req) => {
+  debugger
+  toast.promise(req, {
+    pending: 'Fetching data ...',
+    success: 'Fetched data successfully 👌',
+    error: 'Something went wrong 🤯',
+  });
+}
 const httpMethos = {
   get: axios.get,
   post: axios.post,
   put: axios.put,
-  delete: axios.delete
+  delete: axios.delete,
+  showToastifyLoading
 };
 
 export default httpMethos;
